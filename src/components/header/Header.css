@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+  padding: 0 var(--mantine-spacing-md) 0 var(--mantine-spacing-lg);
+  background-color: var(--agenda-azul);
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.header-marca {
+  display: flex;
+  gap: var(--mantine-spacing-sm);
+  align-items: center;
+  min-width: 0;
+}
+
+.header-logo {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.header-titulo {
+  padding-left: var(--mantine-spacing-md);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-titulo span {
+  font-weight: 500;
+}
+
+/* fondo propio para que el ícono se lea sobre cualquier zona de la imagen */
+.header-boton-tema {
+  flex-shrink: 0;
+  color: #fff;
+  background-color: rgba(0, 32, 64, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: background-color 150ms ease;
+}
+
+.header-boton-tema:hover {
+  color: #fff;
+  background-color: rgba(0, 32, 64, 0.8);
+}
+
+.header-acciones {
+  display: flex;
+  gap: var(--mantine-spacing-xs);
+  align-items: center;
+}
+
+/* mismo fondo que el botón del tema */
+.header-boton-buscar {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: var(--mantine-spacing-xs);
+  align-items: center;
+  min-width: 10.5rem;
+  height: 36px;
+  padding: 0 10px 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  background-color: rgba(0, 32, 64, 0.55);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: var(--mantine-font-size-sm);
+  transition: background-color 150ms ease;
+  backdrop-filter: blur(4px);
+}
+
+/* el texto ocupa el espacio libre: el atajo queda contra el borde derecho */
+.header-boton-buscar-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.header-boton-buscar:hover {
+  background-color: rgba(0, 32, 64, 0.8);
+}
+
+.header-boton-buscar:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.header-boton-buscar-tecla {
+  border-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* en el celular, sólo la lupa */
+@media (max-width: 36em) {
+  .header-boton-buscar {
+    justify-content: center;
+    width: 36px;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .header-boton-buscar-texto,
+  .header-boton-buscar-tecla {
+    display: none;
+  }
+}

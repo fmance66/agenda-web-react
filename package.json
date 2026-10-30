@@ -1,0 +1,53 @@
+{
+  "name": "agenda-web-react",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "concurrently --names api,app --prefix-colors blue,green \"npm --prefix ../agenda-api run dev\" \"vite\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "type-check": "tsc -p tsconfig.server.json",
+    "server": "node server/index.js",
+    "dev:server": "node --watch server/index.js",
+    "test": "npm run test:server && npm run test:front",
+    "test:server": "node --test server/*.test.js",
+    "test:front": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@mantine/core": "^9.6.1",
+    "@mantine/hooks": "^9.6.1",
+    "@mantine/notifications": "^9.6.1",
+    "@tabler/icons-react": "^3.46.0",
+    "@tanstack/react-query": "^5.103.1",
+    "axios": "^1.20.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router": "^8.4.0",
+    "uqr": "^0.1.3",
+    "vcard-creator": "^1.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@tsconfig/node22": "^22.0.6",
+    "@types/node": "^22.20.4",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.6",
+    "eslint": "^10.10.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "fake-indexeddb": "^6.2.5",
+    "globals": "^17.12.0",
+    "happy-dom": "^20.14.5",
+    "typescript": "~6.0.0",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.11"
+  }
+}

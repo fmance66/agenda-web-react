@@ -1,0 +1,17 @@
+.agenda {
+  display: grid;
+  grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+  height: 100%;
+}
+
+.agenda-ficha {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* en pantallas chicas se ve un solo panel */
+@media (max-width: 62em) {
+  .agenda {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,60 @@
+.lista-contactos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: opacity 150ms;
+}
+
+.lista-contactos[data-atenuada] {
+  opacity: 0.55;
+}
+
+.fila-contacto {
+  display: flex;
+  gap: var(--mantine-spacing-sm);
+  align-items: flex-start;
+  width: 100%;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-left: 3px solid transparent;
+  text-decoration: none;
+}
+
+/* sin light-dark(): el build lo traduce a variables que acá no toman valor */
+.fila-contacto:hover {
+  background-color: var(--mantine-color-gray-0);
+}
+
+[data-mantine-color-scheme='dark'] .fila-contacto:hover {
+  background-color: var(--mantine-color-dark-6);
+}
+
+.fila-contacto:focus-visible {
+  outline: 2px solid var(--mantine-primary-color-filled);
+  outline-offset: -2px;
+}
+
+.fila-contacto[aria-current] {
+  border-left-color: var(--mantine-primary-color-filled);
+  background-color: var(--mantine-primary-color-light);
+}
+
+.fila-texto {
+  flex: 1;
+  min-width: 0;
+}
+
+.fila-nombre,
+.fila-datos {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  min-width: 0;
+}
+
+.fila-datos {
+  margin-top: 4px;
+}
+
+.fila-datos svg {
+  vertical-align: -1px;
+}

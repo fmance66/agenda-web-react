@@ -1,0 +1,40 @@
+/* Estilos globales de la aplicación; los colores salen de las variables de Mantine
+   para que funcionen en modo claro y oscuro */
+
+:root {
+  --agenda-azul: #116090;
+}
+
+[data-mantine-color-scheme='dark'] {
+  --agenda-azul: #0b3f5f;
+}
+
+/* el gris "dimmed" de Mantine (#868e96) contra blanco da 3.3:1, por debajo del 4.5:1 que pide
+   WCAG AA para texto chico; éste da 6.3:1 sobre blanco y 4.9:1 sobre la fila seleccionada */
+:root[data-mantine-color-scheme='light'] {
+  --mantine-color-dimmed: #575f67;
+}
+
+/* Mantine ya incluye su reset (box-sizing, margen del body) en @mantine/core/styles.css */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+}

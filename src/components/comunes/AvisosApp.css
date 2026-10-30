@@ -1,0 +1,18 @@
+.aviso-app {
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-bottom: 1px solid var(--mantine-color-default-border);
+  background-color: var(--mantine-primary-color-light);
+}
+
+/* sin light-dark(): el build lo traduce a variables que acá no toman valor */
+.aviso-sin-conexion {
+  border-bottom-color: var(--mantine-color-yellow-4);
+  background-color: var(--mantine-color-yellow-0);
+  color: var(--mantine-color-yellow-9);
+}
+
+[data-mantine-color-scheme='dark'] .aviso-sin-conexion {
+  border-bottom-color: var(--mantine-color-yellow-9);
+  background-color: rgba(250, 176, 5, 0.12);
+  color: var(--mantine-color-yellow-2);
+}

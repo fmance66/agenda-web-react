@@ -1,0 +1,9 @@
+{
+"version": 1,
+"areas": [
+{"codigo":"A000000000","nombre":"Empresa de Prueba","sigla":"EMPR","cuiles":[]},
+{"codigo":"A0M0000000","nombre":"Subgerencia General de Sistemas","sigla":"SGG SIS","cuiles":[]},
+{"codigo":"A0ME000000","nombre":"Gerencia de Sistemas de Consulta","sigla":"GE SCON","cuiles":[]},
+{"codigo":"A0MF000000","nombre":"Gerencia de Sistemas de Pruebas","sigla":"GE SPRU","cuiles":[]}
+]
+}
